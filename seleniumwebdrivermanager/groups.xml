@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<run>
+
+			<include name="functional" />
+
+		</run>
+	</groups>
+	<parameter name="browsername" value="edge" />
+	<test thread-count="5" name="groupsTest">
+
+		<classes>
+			<class name="testNG.Annotations">
+				<methods>
+					<parameter name="url"
+						value="https://parabank.parasoft.com/parabank/admin.htm(opens%20in%20a%20new%20tab)" />
+					<include name="launchapp" />
+
+					<include name="registrationpage" />
+					<parameter name="firstname" value="customer.firstName" />
+					<parameter name="fname" value="srinivas" />
+					<parameter name="lastname" value="customer.lastName" />
+					<parameter name="lname" value="sandy" />
+					<include name="Name" />
+
+					<parameter name="street" value="customer.address.street" />
+					<parameter name="streetname" value="smp" />
+					<parameter name="city" value="customer.address.city" />
+					<parameter name="cityname" value="mncl" />
+					<include name="Address1" />
+
+					<parameter name="state" value="customer.address.state" />
+					<parameter name="statename" value="telangana" />
+					<parameter name="zipcode"
+						value="customer.address.zipCode" />
+					<parameter name="zipcodenumber" value="505025" />
+					<include name="Address2" />
+
+					<parameter name="phonenumber"
+						value="customer.phoneNumber" />
+					<parameter name="number" value="6303024724" />
+					<parameter name="ssn" value="customer.ssn" />
+					<parameter name="ssnnumber" value="50005" />
+					<include name="contact" />
+
+					<parameter name="username" value="customer.username" />
+					<parameter name="un" value="srinu" />
+					<parameter name="password" value="customer.password" />
+					<parameter name="pwd" value="@srinu45" />
+					<parameter name="repassword" value="repeatedPassword" />
+					<parameter name="rpwd" value="@srinu45" />
+					<include name="login" />
+
+					<include name="submit" />
+				</methods>
+			</class>
+
+		</classes>
+	</test> <!-- groupsTest -->
+</suite> <!-- Suite -->
