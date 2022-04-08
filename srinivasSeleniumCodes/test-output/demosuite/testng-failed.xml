@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [demosuite]" guice-stage="DEVELOPMENT">
+  <parameter name="browsername" value="FF"/>
+  <parameter name="url" value="https://www.makemytrip.com/"/>
+  <test thread-count="5" name="test1(failed)">
+    <classes>
+      <class name="testNG.Annotations">
+        <methods>
+          <include name="signup"/>
+        </methods>
+      </class> <!-- testNG.Annotations -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [demosuite] -->
